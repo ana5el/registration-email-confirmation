@@ -1,0 +1,32 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    username: root
+    password: rootpass
+    url: jdbc:mysql://localhost:3306/registration
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+  mail:
+    host: localhost
+    port: 1025
+    username: anas
+    password: anas
+
+    properties:
+      mail:
+        smtp:
+          ssl:
+            trust: "*"
+          auth: true
+          starttls:
+            enable: true
+          connectiontimeout: 5000
+          timeout: 3000
+          writetimeout: 5000
+
+logging:
+  level:
+    org.hibernate.SQL : DEBUG
+
